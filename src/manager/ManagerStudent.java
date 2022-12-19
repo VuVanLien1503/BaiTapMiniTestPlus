@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class ManagerStudent implements Crud<Student> {
+    public static int choiceId = 4;
 
     ManagerClassRoom managerClassRoom = new ManagerClassRoom();
     public ArrayList<Student> listStudent = new ArrayList<>();
@@ -16,6 +17,14 @@ public class ManagerStudent implements Crud<Student> {
         listStudent.add(new Student(1, "Hoang", 22, "Male", "NamDinh", 88, managerClassRoom.listClassRoom.get(0)));
         listStudent.add(new Student(2, "Lien", 25, "Male", "HaiPhong", 77, managerClassRoom.listClassRoom.get(1)));
         listStudent.add(new Student(3, "Son", 22, "Male", "HaNoi", 66, managerClassRoom.listClassRoom.get(2)));
+    }
+
+    public ManagerClassRoom getManagerClassRoom() {
+        return managerClassRoom;
+    }
+
+    public void setManagerClassRoom(ManagerClassRoom managerClassRoom) {
+        this.managerClassRoom = managerClassRoom;
     }
 
     public void showView() {
@@ -118,17 +127,25 @@ public class ManagerStudent implements Crud<Student> {
 
     @Override
     public void delete(Scanner scanner) {
+        Student student=null;
         display();
         int choice;
         do {
             System.out.println("Enter delete ListStudent By ID:");
             System.out.print("Enter ID Want Delete : ");
             int id = Integer.parseInt(scanner.nextLine());
-            if (id > listStudent.size() || id < 0) {
+            if (id >= choiceId|| id < 0) {
                 System.out.println(" ID = " + id + " No in List Student :");
             } else {
-                Student student = listStudent.get(id - 1);
-                listStudent.remove(id - 1);
+                for (Student s :
+                        listStudent) {
+                    if (id == s.getId()) {
+                        student=s;
+                        listStudent.remove(s);
+                        break;
+                    }
+                }
+
                 display();
                 System.out.println("Successful Delete\n-----------------------");
                 student.display();
@@ -144,6 +161,7 @@ public class ManagerStudent implements Crud<Student> {
 
     @Override
     public Student create(Scanner scanner) {
+
         System.out.println("Enter student Name:");
         String name = scanner.nextLine();
         System.out.println("Enter student Age:");
@@ -159,9 +177,9 @@ public class ManagerStudent implements Crud<Student> {
         }
         ClassRoom classRoom = choiceClass(scanner);
         if (point != 0.0) {
-            return new Student(listStudent.size() + 1, name, age, gender, address, point, classRoom);
+            return new Student(choiceId++, name, age, gender, address, point, classRoom);
         } else {
-            return new Student(listStudent.size() + 1, name, age, gender, address, classRoom);
+            return new Student(choiceId++, name, age, gender, address, classRoom);
         }
     }
 
@@ -229,4 +247,5 @@ public class ManagerStudent implements Crud<Student> {
         listStudent.add(student);
         return student;
     }
+
 }

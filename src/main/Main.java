@@ -10,9 +10,10 @@ import java.util.Scanner;
 public class Main {
     static Scanner scanner = new Scanner(System.in);
     static ManagerStudent managerStudent = new ManagerStudent();
-    static ManagerClassRoom managerClassRoom = new ManagerClassRoom();
+//    static ManagerClassRoom managerClassRoom = new ManagerClassRoom();
     static String name = "";
     public static void main(String[] args) {
+//        ManagerClassRoom M = managerStudent.getManagerClassRoom();
         int choice;
         do {
             System.out.println("MENU:");
@@ -72,24 +73,24 @@ public class Main {
             choice = Integer.parseInt(scanner.nextLine());
             switch (choice) {
                 case 1:
-                    managerClassRoom.display();
+                    managerStudent.getManagerClassRoom().display();
                     break;
                 case 2:
                     System.out.println("Enter Find ClassRoom By ID :");
-                    managerClassRoom.display(Integer.parseInt(scanner.nextLine()));
+                    managerStudent.getManagerClassRoom().display(Integer.parseInt(scanner.nextLine()));
                     break;
                 case 3:
                     System.out.println("Enter Name ClassRom");
-                    managerClassRoom.display(scanner.nextLine());
+                    managerStudent.getManagerClassRoom().display(scanner.nextLine());
                     break;
                 case 4:
-                    managerClassRoom.add(scanner);
+                    managerStudent.getManagerClassRoom().add(scanner);
                     break;
                 case 5:
-                    managerClassRoom.edit(scanner);
+                    managerStudent.getManagerClassRoom().edit(scanner);
                     break;
                 case 6:
-                    managerClassRoom.delete(scanner);
+                    managerStudent.getManagerClassRoom().delete(scanner);
                     break;
             }
         } while (choice != 0);

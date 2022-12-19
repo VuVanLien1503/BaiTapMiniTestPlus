@@ -5,18 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bfa0fe60-c3ce-49d4-8a67-45a17b34c5bd" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaiTap.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/manager/ManagerClassRoom.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/manager/ManagerStudent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/ClassRoom.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/Crud.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/manager/ManagerStudent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/manager/ManagerStudent.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,7 +39,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/CodeGym/MD2/BaiTap",
+    "last_opened_file_path": "D:/CodeGym/MD2/Week3/BaiTap",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -88,7 +79,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1671253540893</updated>
-      <workItem from="1671253542166" duration="52371000" />
+      <workItem from="1671253542166" duration="52707000" />
+      <workItem from="1671412367795" duration="7459000" />
     </task>
     <servers />
   </component>
